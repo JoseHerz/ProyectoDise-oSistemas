@@ -47,5 +47,28 @@ namespace ProyectoDiseñoSistemas.Vista
             FrmRegistroEmpleado frmRegistroEmpleado = new FrmRegistroEmpleado();
             frmRegistroEmpleado.ShowDialog();
         }
+
+        int m, mx, my;
+
+        private void BarraTitulo_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void BarraTitulo_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void BarraTitulo_MouseUp_1(object sender, MouseEventArgs e)
+        {
+            m = 0;
+        }
+
     }
 }

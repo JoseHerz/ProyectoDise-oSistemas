@@ -106,6 +106,9 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(1308, 43);
             this.BarraTitulo.TabIndex = 4;
+            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            this.BarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseMove);
+            this.BarraTitulo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseUp);
             // 
             // label2
             // 
@@ -114,9 +117,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(10, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 29);
+            this.label2.Size = new System.Drawing.Size(112, 29);
             this.label2.TabIndex = 18;
-            this.label2.Text = "Principal";
+            this.label2.Text = "Registro";
             // 
             // BtnResiz
             // 

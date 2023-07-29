@@ -200,6 +200,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRegistroUsuario";
             this.Text = "RegistroUsuario";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FrmRegistroUsuario_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FrmRegistroUsuario_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FrmRegistroUsuario_MouseUp);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnExit)).EndInit();
