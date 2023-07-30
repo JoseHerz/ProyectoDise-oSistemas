@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -10,9 +10,15 @@ namespace ProyectoDiseñoSistemas.Controlador
 {
     internal class Conexion
     {
-        public SqlConnection GetConexion()
+        public SqlConnection GetConexionW()
         {
             return new SqlConnection(ConfigurationManager.ConnectionStrings["DBPROYECTO"].ToString());
         }
+
+        public SqlConnection GetConexionN()
+        {
+            return new SqlConnection(ConfigurationManager.ConnectionStrings["DBPROYECTO"].ToString());
+        }
+
     }
 }

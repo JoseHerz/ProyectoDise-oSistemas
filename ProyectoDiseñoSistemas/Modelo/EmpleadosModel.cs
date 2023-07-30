@@ -25,6 +25,7 @@ namespace ProyectoDiseñoSistemas.Modelo
         public string GENERO { get; set; }
 
         public DateTime FECHA_INGRESO { get; set; }
+        public DateTime FECHA_SALIDA { get; set; }
         public int ID_CARGO { get; set; }
         public int ID_HORARIO { get; set; }
         public int ID_USUARIO { get; set; }
@@ -33,6 +34,10 @@ namespace ProyectoDiseñoSistemas.Modelo
         public int ID_TIPO_SALARIO { get; set; }
         public string NUMERO_CUENTA { get; set; }
         public byte[] FOTO_EMPLEADO { get; set; }
+
+        public int ID_DEPARTAMENTO { get; set; }
+
+        public bool ESTATUS { get; set; }
 
         public static DataTable GetEmpleado { get; set; }
 

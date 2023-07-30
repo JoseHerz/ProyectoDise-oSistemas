@@ -11,9 +11,9 @@ namespace ProyectoDiseñoSistemas.Modelo
     {
         public int ID_TRANSACCION { get; set; }
         public int ID_EMPLEADO { get; set; }
-        public int ID_DEDUCCIONES { get; set; }
         public int ID_TIPO_SALARIO { get; set; }
         public int ID_TIPO_EMPLEADO { get; set; }
+        public int ID_DEDUCCIONES { get; set; }
         public int ID_PERMISOS { get; set; }
         public int ID_HORARIOS { get; set; }
         public int ID_ASISTENCIA { get; set; }
