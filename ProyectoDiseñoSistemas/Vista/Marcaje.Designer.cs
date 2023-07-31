@@ -1,16 +1,16 @@
-﻿namespace ProyectoDiseñoSistemas
+﻿namespace ProyectoDiseñoSistemas.Vista
 {
-    partial class FrmMenu
+    partial class Marcaje
     {
         /// <summary>
-        /// Variable del diseñador necesaria.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén usando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,22 +20,26 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
-            this.label3 = new System.Windows.Forms.Label();
-            this.PanelCentral = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.MenuVertical = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Marcaje));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PanelCentral = new System.Windows.Forms.Panel();
+            this.MenuVertical = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnResiz = new System.Windows.Forms.PictureBox();
+            this.BtnMin = new System.Windows.Forms.PictureBox();
+            this.BtnMax = new System.Windows.Forms.PictureBox();
+            this.BtnExit = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnUsuario = new System.Windows.Forms.Button();
@@ -44,61 +48,62 @@
             this.BtnFacturas = new System.Windows.Forms.Button();
             this.BtnPlanilla = new System.Windows.Forms.Button();
             this.BtnEmpleados = new System.Windows.Forms.Button();
-            this.BtnResiz = new System.Windows.Forms.PictureBox();
-            this.BtnMin = new System.Windows.Forms.PictureBox();
-            this.BtnMax = new System.Windows.Forms.PictureBox();
-            this.BtnExit = new System.Windows.Forms.PictureBox();
+            this.PhotoEmpl = new System.Windows.Forms.PictureBox();
+            this.NomEmpl = new System.Windows.Forms.Label();
+            this.Fechalb = new System.Windows.Forms.Label();
+            this.horalb = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.BarraTitulo.SuspendLayout();
             this.PanelCentral.SuspendLayout();
             this.MenuVertical.SuspendLayout();
-            this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnResiz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoEmpl)).BeginInit();
             this.SuspendLayout();
             // 
-            // label3
+            // BarraTitulo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(218, 232);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(272, 55);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Bienvenido";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(225)))));
+            this.BarraTitulo.Controls.Add(this.label2);
+            this.BarraTitulo.Controls.Add(this.BtnResiz);
+            this.BarraTitulo.Controls.Add(this.BtnMin);
+            this.BarraTitulo.Controls.Add(this.BtnMax);
+            this.BarraTitulo.Controls.Add(this.BtnExit);
+            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraTitulo.Location = new System.Drawing.Point(220, 0);
+            this.BarraTitulo.Name = "BarraTitulo";
+            this.BarraTitulo.Size = new System.Drawing.Size(642, 35);
+            this.BarraTitulo.TabIndex = 6;
+            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            this.BarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseMove);
+            this.BarraTitulo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseUp);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(8, 5);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 24);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Principal";
             // 
             // PanelCentral
             // 
             this.PanelCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.PanelCentral.Controls.Add(this.label3);
+            this.PanelCentral.Controls.Add(this.horalb);
+            this.PanelCentral.Controls.Add(this.Fechalb);
+            this.PanelCentral.Controls.Add(this.NomEmpl);
+            this.PanelCentral.Controls.Add(this.PhotoEmpl);
             this.PanelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelCentral.Location = new System.Drawing.Point(220, 35);
+            this.PanelCentral.Location = new System.Drawing.Point(220, 0);
             this.PanelCentral.Name = "PanelCentral";
-            this.PanelCentral.Size = new System.Drawing.Size(644, 565);
-            this.PanelCentral.TabIndex = 5;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(225)))));
-            this.panel1.Location = new System.Drawing.Point(-2, 105);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 43);
-            this.panel1.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(56, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 24);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Apartados:";
+            this.PanelCentral.Size = new System.Drawing.Size(642, 599);
+            this.PanelCentral.TabIndex = 8;
             // 
             // MenuVertical
             // 
@@ -114,39 +119,80 @@
             this.MenuVertical.Controls.Add(this.label1);
             this.MenuVertical.Controls.Add(this.panel1);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
-            this.MenuVertical.Location = new System.Drawing.Point(0, 35);
+            this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(220, 565);
-            this.MenuVertical.TabIndex = 4;
+            this.MenuVertical.Size = new System.Drawing.Size(220, 599);
+            this.MenuVertical.TabIndex = 7;
+            this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(8, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 24);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Principal";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(56, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 24);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Apartados:";
             // 
-            // BarraTitulo
+            // panel1
             // 
-            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(225)))));
-            this.BarraTitulo.Controls.Add(this.label2);
-            this.BarraTitulo.Controls.Add(this.BtnResiz);
-            this.BarraTitulo.Controls.Add(this.BtnMin);
-            this.BarraTitulo.Controls.Add(this.BtnMax);
-            this.BarraTitulo.Controls.Add(this.BtnExit);
-            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
-            this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(864, 35);
-            this.BarraTitulo.TabIndex = 3;
-            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
-            this.BarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseMove);
-            this.BarraTitulo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseUp);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(225)))));
+            this.panel1.Location = new System.Drawing.Point(3, 393);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 43);
+            this.panel1.TabIndex = 11;
+            // 
+            // BtnResiz
+            // 
+            this.BtnResiz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnResiz.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnResiz.Image = ((System.Drawing.Image)(resources.GetObject("BtnResiz.Image")));
+            this.BtnResiz.Location = new System.Drawing.Point(556, 0);
+            this.BtnResiz.Name = "BtnResiz";
+            this.BtnResiz.Size = new System.Drawing.Size(39, 35);
+            this.BtnResiz.TabIndex = 3;
+            this.BtnResiz.TabStop = false;
+            this.BtnResiz.Visible = false;
+            this.BtnResiz.Click += new System.EventHandler(this.BtnResiz_Click);
+            // 
+            // BtnMin
+            // 
+            this.BtnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnMin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMin.Image = ((System.Drawing.Image)(resources.GetObject("BtnMin.Image")));
+            this.BtnMin.Location = new System.Drawing.Point(512, 11);
+            this.BtnMin.Name = "BtnMin";
+            this.BtnMin.Size = new System.Drawing.Size(39, 29);
+            this.BtnMin.TabIndex = 2;
+            this.BtnMin.TabStop = false;
+            this.BtnMin.Click += new System.EventHandler(this.BtnMin_Click);
+            // 
+            // BtnMax
+            // 
+            this.BtnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnMax.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMax.Image = ((System.Drawing.Image)(resources.GetObject("BtnMax.Image")));
+            this.BtnMax.Location = new System.Drawing.Point(556, 0);
+            this.BtnMax.Name = "BtnMax";
+            this.BtnMax.Size = new System.Drawing.Size(39, 35);
+            this.BtnMax.TabIndex = 1;
+            this.BtnMax.TabStop = false;
+            this.BtnMax.Click += new System.EventHandler(this.BtnMax_Click);
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
+            this.BtnExit.Location = new System.Drawing.Point(602, 3);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(56, 46);
+            this.BtnExit.TabIndex = 0;
+            this.BtnExit.TabStop = false;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // button2
             // 
@@ -182,7 +228,6 @@
             this.button1.TabIndex = 24;
             this.button1.Text = "Historial de Pagos";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtnUsuario
             // 
@@ -200,7 +245,6 @@
             this.BtnUsuario.TabIndex = 23;
             this.BtnUsuario.Text = "Usuarios";
             this.BtnUsuario.UseVisualStyleBackColor = false;
-            this.BtnUsuario.Click += new System.EventHandler(this.BtnUsuario_Click);
             // 
             // BtnHorarios
             // 
@@ -218,7 +262,6 @@
             this.BtnHorarios.TabIndex = 22;
             this.BtnHorarios.Text = "Horarios";
             this.BtnHorarios.UseVisualStyleBackColor = false;
-            this.BtnHorarios.Click += new System.EventHandler(this.BtnHorarios_Click);
             // 
             // BtnAsistencia
             // 
@@ -236,7 +279,6 @@
             this.BtnAsistencia.TabIndex = 21;
             this.BtnAsistencia.Text = "Asistencia";
             this.BtnAsistencia.UseVisualStyleBackColor = false;
-            this.BtnAsistencia.Click += new System.EventHandler(this.BtnAsistencia_Click);
             // 
             // BtnFacturas
             // 
@@ -254,7 +296,6 @@
             this.BtnFacturas.TabIndex = 20;
             this.BtnFacturas.Text = "Boucher";
             this.BtnFacturas.UseVisualStyleBackColor = false;
-            this.BtnFacturas.Click += new System.EventHandler(this.BtnFacturas_Click);
             // 
             // BtnPlanilla
             // 
@@ -272,7 +313,6 @@
             this.BtnPlanilla.TabIndex = 19;
             this.BtnPlanilla.Text = "Planilla";
             this.BtnPlanilla.UseVisualStyleBackColor = false;
-            this.BtnPlanilla.Click += new System.EventHandler(this.BtnPlanilla_Click);
             // 
             // BtnEmpleados
             // 
@@ -290,104 +330,113 @@
             this.BtnEmpleados.TabIndex = 18;
             this.BtnEmpleados.Text = "Empleados";
             this.BtnEmpleados.UseVisualStyleBackColor = false;
-            this.BtnEmpleados.Click += new System.EventHandler(this.BtnEmpleados_Click);
             // 
-            // BtnResiz
+            // PhotoEmpl
             // 
-            this.BtnResiz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnResiz.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnResiz.Image = ((System.Drawing.Image)(resources.GetObject("BtnResiz.Image")));
-            this.BtnResiz.Location = new System.Drawing.Point(778, 0);
-            this.BtnResiz.Name = "BtnResiz";
-            this.BtnResiz.Size = new System.Drawing.Size(39, 35);
-            this.BtnResiz.TabIndex = 3;
-            this.BtnResiz.TabStop = false;
-            this.BtnResiz.Visible = false;
-            this.BtnResiz.Click += new System.EventHandler(this.BtnResiz_Click);
+            this.PhotoEmpl.Image = global::ProyectoDiseñoSistemas.Properties.Resources._585e4beacb11b227491c3399;
+            this.PhotoEmpl.Location = new System.Drawing.Point(233, 184);
+            this.PhotoEmpl.Margin = new System.Windows.Forms.Padding(2);
+            this.PhotoEmpl.Name = "PhotoEmpl";
+            this.PhotoEmpl.Size = new System.Drawing.Size(163, 171);
+            this.PhotoEmpl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PhotoEmpl.TabIndex = 31;
+            this.PhotoEmpl.TabStop = false;
             // 
-            // BtnMin
+            // NomEmpl
             // 
-            this.BtnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnMin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnMin.Image = ((System.Drawing.Image)(resources.GetObject("BtnMin.Image")));
-            this.BtnMin.Location = new System.Drawing.Point(734, 11);
-            this.BtnMin.Name = "BtnMin";
-            this.BtnMin.Size = new System.Drawing.Size(39, 29);
-            this.BtnMin.TabIndex = 2;
-            this.BtnMin.TabStop = false;
-            this.BtnMin.Click += new System.EventHandler(this.BtnMin_Click);
+            this.NomEmpl.AutoSize = true;
+            this.NomEmpl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomEmpl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NomEmpl.Location = new System.Drawing.Point(111, 388);
+            this.NomEmpl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NomEmpl.Name = "NomEmpl";
+            this.NomEmpl.Size = new System.Drawing.Size(419, 39);
+            this.NomEmpl.TabIndex = 32;
+            this.NomEmpl.Text = "Juan Orlando Hernandez";
+            this.NomEmpl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NomEmpl.Click += new System.EventHandler(this.label3_Click);
             // 
-            // BtnMax
+            // Fechalb
             // 
-            this.BtnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnMax.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnMax.Image = ((System.Drawing.Image)(resources.GetObject("BtnMax.Image")));
-            this.BtnMax.Location = new System.Drawing.Point(778, 0);
-            this.BtnMax.Name = "BtnMax";
-            this.BtnMax.Size = new System.Drawing.Size(39, 35);
-            this.BtnMax.TabIndex = 1;
-            this.BtnMax.TabStop = false;
-            this.BtnMax.Click += new System.EventHandler(this.BtnMax_Click);
+            this.Fechalb.AutoSize = true;
+            this.Fechalb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fechalb.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Fechalb.Location = new System.Drawing.Point(252, 97);
+            this.Fechalb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Fechalb.Name = "Fechalb";
+            this.Fechalb.Size = new System.Drawing.Size(144, 25);
+            this.Fechalb.TabIndex = 33;
+            this.Fechalb.Text = "31/Julio/2023";
+            this.Fechalb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // BtnExit
+            // horalb
             // 
-            this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
-            this.BtnExit.Location = new System.Drawing.Point(824, 3);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(56, 46);
-            this.BtnExit.TabIndex = 0;
-            this.BtnExit.TabStop = false;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            this.horalb.AutoSize = true;
+            this.horalb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.horalb.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.horalb.Location = new System.Drawing.Point(265, 128);
+            this.horalb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.horalb.Name = "horalb";
+            this.horalb.Size = new System.Drawing.Size(118, 20);
+            this.horalb.TabIndex = 35;
+            this.horalb.Text = "02:15:44 p.m.";
+            this.horalb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FrmMenu
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Marcaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 600);
+            this.ClientSize = new System.Drawing.Size(862, 599);
+            this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.PanelCentral);
             this.Controls.Add(this.MenuVertical);
-            this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "FrmMenu";
-            this.Text = "Menu Principal";
+            this.Name = "Marcaje";
+            this.Text = "Marcaje";
+            this.BarraTitulo.ResumeLayout(false);
+            this.BarraTitulo.PerformLayout();
             this.PanelCentral.ResumeLayout(false);
             this.PanelCentral.PerformLayout();
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
-            this.BarraTitulo.ResumeLayout(false);
-            this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnResiz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoEmpl)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel PanelCentral;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BtnEmpleados;
-        private System.Windows.Forms.Button BtnPlanilla;
-        private System.Windows.Forms.Button BtnFacturas;
-        private System.Windows.Forms.Button BtnAsistencia;
-        private System.Windows.Forms.Button BtnHorarios;
-        private System.Windows.Forms.Button BtnUsuario;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel MenuVertical;
-        private System.Windows.Forms.PictureBox BtnExit;
-        private System.Windows.Forms.PictureBox BtnMax;
-        private System.Windows.Forms.PictureBox BtnMin;
-        private System.Windows.Forms.PictureBox BtnResiz;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel BarraTitulo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox BtnResiz;
+        private System.Windows.Forms.PictureBox BtnMin;
+        private System.Windows.Forms.PictureBox BtnMax;
+        private System.Windows.Forms.PictureBox BtnExit;
+        private System.Windows.Forms.Panel PanelCentral;
+        private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnUsuario;
+        private System.Windows.Forms.Button BtnHorarios;
+        private System.Windows.Forms.Button BtnAsistencia;
+        private System.Windows.Forms.Button BtnFacturas;
+        private System.Windows.Forms.Button BtnPlanilla;
+        private System.Windows.Forms.Button BtnEmpleados;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox PhotoEmpl;
+        private System.Windows.Forms.Label NomEmpl;
+        private System.Windows.Forms.Label horalb;
+        private System.Windows.Forms.Label Fechalb;
+        private System.Windows.Forms.Timer timer1;
     }
 }
-

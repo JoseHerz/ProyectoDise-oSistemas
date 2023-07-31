@@ -149,6 +149,12 @@
     <Compile Include="Vista\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Marcaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Marcaje.Designer.cs">
+      <DependentUpon>Marcaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Pagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,9 @@
     <EmbeddedResource Include="Vista\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Marcaje.resx">
+      <DependentUpon>Marcaje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Pagos.resx">
       <DependentUpon>Pagos.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,7 +245,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="img\reloj.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="img\png-clipart-daylight-saving-time-in-the-united-states-computer-icons-time-logo-time %282%29.png" />
     <None Include="img\imagen_2023-07-27_145021816.png" />

@@ -93,6 +93,12 @@ namespace ProyectoDiseñoSistemas
             my = e.Y;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Marcaje marcaje = new Marcaje();
+            marcaje.Show();
+        }
+
         private void BarraTitulo_MouseMove(object sender, MouseEventArgs e)
         {
             if (m == 1)
@@ -105,5 +111,6 @@ namespace ProyectoDiseñoSistemas
         {
             m = 0;
         }
+
     }
 }
