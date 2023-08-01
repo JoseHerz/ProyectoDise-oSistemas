@@ -36,17 +36,17 @@
             this.BtnMax = new System.Windows.Forms.PictureBox();
             this.BtnExit = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TXTDescripcion = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TXTSalida = new System.Windows.Forms.TextBox();
+            this.TXTLlegada = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtp1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.BtnAñadir = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnExportar = new System.Windows.Forms.Button();
-            this.dtp1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TXTLlegada = new System.Windows.Forms.TextBox();
-            this.TXTSalida = new System.Windows.Forms.TextBox();
-            this.TXTDescripcion = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnResiz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMin)).BeginInit();
@@ -67,7 +67,7 @@
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(800, 43);
+            this.BarraTitulo.Size = new System.Drawing.Size(819, 43);
             this.BarraTitulo.TabIndex = 6;
             // 
             // label2
@@ -86,7 +86,7 @@
             this.BtnResiz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnResiz.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnResiz.Image = ((System.Drawing.Image)(resources.GetObject("BtnResiz.Image")));
-            this.BtnResiz.Location = new System.Drawing.Point(686, 0);
+            this.BtnResiz.Location = new System.Drawing.Point(705, 0);
             this.BtnResiz.Margin = new System.Windows.Forms.Padding(4);
             this.BtnResiz.Name = "BtnResiz";
             this.BtnResiz.Size = new System.Drawing.Size(52, 43);
@@ -99,7 +99,7 @@
             this.BtnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMin.Image = ((System.Drawing.Image)(resources.GetObject("BtnMin.Image")));
-            this.BtnMin.Location = new System.Drawing.Point(626, 14);
+            this.BtnMin.Location = new System.Drawing.Point(645, 14);
             this.BtnMin.Margin = new System.Windows.Forms.Padding(4);
             this.BtnMin.Name = "BtnMin";
             this.BtnMin.Size = new System.Drawing.Size(52, 36);
@@ -111,7 +111,7 @@
             this.BtnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnMax.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnMax.Image = ((System.Drawing.Image)(resources.GetObject("BtnMax.Image")));
-            this.BtnMax.Location = new System.Drawing.Point(686, 0);
+            this.BtnMax.Location = new System.Drawing.Point(705, 0);
             this.BtnMax.Margin = new System.Windows.Forms.Padding(4);
             this.BtnMax.Name = "BtnMax";
             this.BtnMax.Size = new System.Drawing.Size(52, 43);
@@ -123,7 +123,7 @@
             this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnExit.Image = ((System.Drawing.Image)(resources.GetObject("BtnExit.Image")));
-            this.BtnExit.Location = new System.Drawing.Point(746, 4);
+            this.BtnExit.Location = new System.Drawing.Point(765, 4);
             this.BtnExit.Margin = new System.Windows.Forms.Padding(4);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(75, 57);
@@ -149,8 +149,69 @@
             this.panel2.Location = new System.Drawing.Point(0, 43);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 407);
+            this.panel2.Size = new System.Drawing.Size(819, 418);
             this.panel2.TabIndex = 39;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(27, 147);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(273, 29);
+            this.label5.TabIndex = 51;
+            this.label5.Text = "Ingrese una Descripcion";
+            // 
+            // TXTDescripcion
+            // 
+            this.TXTDescripcion.Location = new System.Drawing.Point(319, 111);
+            this.TXTDescripcion.Name = "TXTDescripcion";
+            this.TXTDescripcion.Size = new System.Drawing.Size(136, 22);
+            this.TXTDescripcion.TabIndex = 50;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(27, 111);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(266, 29);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "Ingrese el tipo de turno:";
+            // 
+            // TXTSalida
+            // 
+            this.TXTSalida.Location = new System.Drawing.Point(319, 69);
+            this.TXTSalida.Name = "TXTSalida";
+            this.TXTSalida.Size = new System.Drawing.Size(136, 22);
+            this.TXTSalida.TabIndex = 48;
+            // 
+            // TXTLlegada
+            // 
+            this.TXTLlegada.Location = new System.Drawing.Point(319, 24);
+            this.TXTLlegada.Name = "TXTLlegada";
+            this.TXTLlegada.Size = new System.Drawing.Size(136, 22);
+            this.TXTLlegada.TabIndex = 47;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(27, 306);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(286, 29);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Ingrese la fecha de inicio:";
+            // 
+            // dtp1
+            // 
+            this.dtp1.Location = new System.Drawing.Point(319, 313);
+            this.dtp1.Name = "dtp1";
+            this.dtp1.Size = new System.Drawing.Size(254, 22);
+            this.dtp1.TabIndex = 44;
             // 
             // label3
             // 
@@ -198,72 +259,11 @@
             this.BtnExportar.Text = "Exportar Horario";
             this.BtnExportar.UseVisualStyleBackColor = true;
             // 
-            // dtp1
-            // 
-            this.dtp1.Location = new System.Drawing.Point(319, 313);
-            this.dtp1.Name = "dtp1";
-            this.dtp1.Size = new System.Drawing.Size(254, 22);
-            this.dtp1.TabIndex = 44;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(27, 306);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 29);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "Ingrese la fecha de inicio:";
-            // 
-            // TXTLlegada
-            // 
-            this.TXTLlegada.Location = new System.Drawing.Point(319, 24);
-            this.TXTLlegada.Name = "TXTLlegada";
-            this.TXTLlegada.Size = new System.Drawing.Size(136, 22);
-            this.TXTLlegada.TabIndex = 47;
-            // 
-            // TXTSalida
-            // 
-            this.TXTSalida.Location = new System.Drawing.Point(319, 69);
-            this.TXTSalida.Name = "TXTSalida";
-            this.TXTSalida.Size = new System.Drawing.Size(136, 22);
-            this.TXTSalida.TabIndex = 48;
-            // 
-            // TXTDescripcion
-            // 
-            this.TXTDescripcion.Location = new System.Drawing.Point(319, 111);
-            this.TXTDescripcion.Name = "TXTDescripcion";
-            this.TXTDescripcion.Size = new System.Drawing.Size(136, 22);
-            this.TXTDescripcion.TabIndex = 50;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(27, 111);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(333, 36);
-            this.label4.TabIndex = 49;
-            this.label4.Text = "Ingrese el tipo de turno:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(27, 147);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(273, 29);
-            this.label5.TabIndex = 51;
-            this.label5.Text = "Ingrese una Descripcion";
-            // 
             // FrmCrearHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(819, 461);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

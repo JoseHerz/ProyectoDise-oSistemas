@@ -12,7 +12,7 @@ namespace ProyectoDiseñoSistemas.Controlador
     {
         public SqlConnection GetConexionW()
         {
-            return new SqlConnection(ConfigurationManager.ConnectionStrings["DBPROYECTO1"].ToString());
+            return new SqlConnection(ConfigurationManager.ConnectionStrings["DBPROYECTO"].ToString());
         }
 
         public SqlConnection GetConexionN()
