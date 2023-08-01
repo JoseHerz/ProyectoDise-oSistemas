@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoDiseñoSistemas.Controlador;
+using ProyectoDiseñoSistemas.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,12 +19,25 @@ namespace ProyectoDiseñoSistemas.Vista
             InitializeComponent();
         }
 
+        private void FrmEmpleados_Load(object sender, EventArgs e)
+        {
+            obtenerempleados();
+        }
+
+
+
         private void BtnExit_Click(object sender, EventArgs e)
         {
             this.Close();
 
         }
 
+        public void obtenerempleados()
+        {
+            new EmpleadoControl().ListarEmpleados();
+            dataGridView1.DataSource = EmpleadosModel.GetEmpleado;
+        }
+        
         private void BtnResiz_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;

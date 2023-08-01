@@ -111,7 +111,33 @@ namespace ProyectoDiseñoSistemas.Controlador
             {
                 SqlConnection Con = new Conexion().GetConexionN();
                 Con.Open();
-                string sql = "Select * from EMPLEADOS";
+                string sql =  "SELECT E.ID_EMPLEADO," +
+                              "CONCAT(E.PRIMER_NOMBRE, ' ', E.PRIMER_APELLIDO) AS NOMBRE," +
+                              "E.DNI," +
+                              "E.DIRECCION," +
+                              "E.TELEFONO," +
+                              "E.FECHA_NACIMIENTO," +
+                              "E.GENERO," +
+                              "E.FECHA_INGRESO,"+
+                              "E.FECHA_SALIDA,"+
+                              "C.DESCRIPCION_CARGO, --Nombre del cargo desde la tabla Tbl_Cargos"+
+                              "H.DESCRIPCION AS HORARIO, --TABLA HORARIOS"+
+                              "U.USUARIOS_USER AS USUARIO,"+
+                              "E.SALARIO_BASE,"+
+                              "T.DESCRIPCION_TIPOEMPLEADO AS TIPO_DE_EMPLEADO, --TABLA TIPO EMPLEADO"+
+                              "TT.DESCRIPCION_TIPO_SALARIO AS PLANILLA, --TABLA TIPO SALARIO"+
+                              "E.NUMERO_CUENTA,"+
+                              "E.FOTO_EMPLEADO,"+
+                              "D.DESCRIPCION_DEPARTAMENTO AS DEPARTAMENTO, --TABLA DEPARTAMENTO"+
+                              "E.ESTATUS"+
+                              "FROM"+
+                              "EMPLEADOS E"+
+                              "INNER JOIN CARGO C ON E.ID_CARGO = C.ID_CARGO"+
+                              "INNER JOIN DEPARTAMENTO D ON E.ID_DEPARTAMENTO = D.ID_DEPARTAMENTO"+
+                              "INNER JOIN HORARIOS H ON E.ID_HORARIO = H.ID_HORARIO"+
+                              "INNER JOIN TIPO_EMPLEADO T ON E.ID_TIPO_EMPLEADO = T.ID_TIPO_EMPLEADO"+
+                              "INNER JOIN TIPO_SALARIO TT ON E.ID_TIPO_SALARIO = TT.ID_TIPO_SALARIO"+
+                              "INNER JOIN USUARIOS U ON E.ID_USUARIO = U.ID_USUARIO;";
                 SqlDataAdapter adaptador = new SqlDataAdapter(sql, Con);
                 adaptador.Fill(dt);
             }
