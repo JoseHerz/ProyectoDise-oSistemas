@@ -46,12 +46,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.CMBHorario = new System.Windows.Forms.ComboBox();
+            this.TXTBuscar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnExportar = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnResiz)).BeginInit();
@@ -313,12 +313,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.CMBHorario);
+            this.panel2.Controls.Add(this.TXTBuscar);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.BtnBuscar);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.BtnExportar);
             this.panel2.Controls.Add(this.dataGridView2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -328,22 +328,22 @@
             this.panel2.Size = new System.Drawing.Size(1054, 677);
             this.panel2.TabIndex = 38;
             // 
-            // comboBox1
+            // CMBHorario
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(163, 150);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 24);
-            this.comboBox1.TabIndex = 45;
+            this.CMBHorario.FormattingEnabled = true;
+            this.CMBHorario.Location = new System.Drawing.Point(163, 150);
+            this.CMBHorario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CMBHorario.Name = "CMBHorario";
+            this.CMBHorario.Size = new System.Drawing.Size(151, 24);
+            this.CMBHorario.TabIndex = 45;
             // 
-            // textBox2
+            // TXTBuscar
             // 
-            this.textBox2.Location = new System.Drawing.Point(292, 85);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(489, 22);
-            this.textBox2.TabIndex = 44;
+            this.TXTBuscar.Location = new System.Drawing.Point(292, 85);
+            this.TXTBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TXTBuscar.Name = "TXTBuscar";
+            this.TXTBuscar.Size = new System.Drawing.Size(489, 22);
+            this.TXTBuscar.TabIndex = 44;
             // 
             // label3
             // 
@@ -356,17 +356,17 @@
             this.label3.TabIndex = 43;
             this.label3.Text = "Nombre Empleado";
             // 
-            // button2
+            // BtnBuscar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(788, 78);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 30);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnBuscar.Location = new System.Drawing.Point(788, 78);
+            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(117, 30);
+            this.BtnBuscar.TabIndex = 37;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -379,17 +379,17 @@
             this.label6.TabIndex = 35;
             this.label6.Text = "Horario:";
             // 
-            // button3
+            // BtnExportar
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(829, 592);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(179, 49);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "Exportar Horario";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExportar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnExportar.Location = new System.Drawing.Point(829, 592);
+            this.BtnExportar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnExportar.Name = "BtnExportar";
+            this.BtnExportar.Size = new System.Drawing.Size(179, 49);
+            this.BtnExportar.TabIndex = 23;
+            this.BtnExportar.Text = "Exportar Horario";
+            this.BtnExportar.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
             // 
@@ -401,6 +401,7 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(951, 366);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // FrmHorarios
             // 
@@ -447,12 +448,12 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox CMBHorario;
+        private System.Windows.Forms.TextBox TXTBuscar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnExportar;
         private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

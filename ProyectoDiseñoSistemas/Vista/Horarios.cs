@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoDiseñoSistemas.Controlador;
+using ProyectoDiseñoSistemas.Modelo;
 
 namespace ProyectoDiseñoSistemas.Vista
 {
     public partial class FrmHorarios : Form
     {
+        //HorariosModel horariosModel;
+        //crear la vista "public FrmCrearHorario Padre;"
+        //bool ValEditar = false;
+        //bool ValEliminar = false;
         public FrmHorarios()
         {
             InitializeComponent();
@@ -49,6 +55,11 @@ namespace ProyectoDiseñoSistemas.Vista
             m = 1;
             mx = e.X;
             my = e.Y;
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void BarraTitulo_MouseMove(object sender, MouseEventArgs e)

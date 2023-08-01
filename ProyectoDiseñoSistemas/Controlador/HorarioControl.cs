@@ -21,8 +21,8 @@ namespace ProyectoDiseñoSistemas.Controlador
                 using (SqlConnection Con = new Conexion().GetConexionN())
                 {
                     Con.Open();
-                    string sql = "Insert Into HORARIOS(ID_HORARIO,DESCRIPCION_HORARIO,TIPO_TURNO,HORA_ENTRADA,HORA_SALIDA,HORAS_SEMANALES,ESTATUS) select" +
-                                " '" + Modelo.ID_HORARIO + "', '" + Modelo.DESCRIPCION_HORARIO + "','" + Modelo.TIPO_TURNO + "','" + Modelo.HORA_ENTRADA + "','" + Modelo.HORA_SALIDA + "','" + Modelo.HORAS_SEMANALES + "','" + Modelo.ESTATUS + "'";
+                    string sql = "Insert Into HORARIOS(ID_HORARIO,DESCRIPCION_HORARIO,TIPO_TURNO,HORA_ENTRADA,HORA_SALIDA,HORAS_SEMANALES,ESTATUS, FECHAINICIO) select" +
+                                " '" + Modelo.ID_HORARIO + "', '" + Modelo.DESCRIPCION_HORARIO + "','" + Modelo.TIPO_TURNO + "','" + Modelo.HORA_ENTRADA + "','" + Modelo.HORA_SALIDA + "','" + Modelo.HORAS_SEMANALES + "','" + Modelo.ESTATUS + "','" + Modelo.FECHAINICIO + "'";
 
                     using (SqlCommand cmd = new SqlCommand(sql, Con))
                     {
