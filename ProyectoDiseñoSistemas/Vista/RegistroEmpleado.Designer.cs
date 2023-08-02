@@ -39,20 +39,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.Grbempleadoempresarial = new System.Windows.Forms.GroupBox();
+            this.chkestatus = new System.Windows.Forms.CheckBox();
+            this.cmbusuario = new System.Windows.Forms.ComboBox();
             this.cmbtipoempleado = new System.Windows.Forms.ComboBox();
-            this.cmbestatus = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.dtpsalida = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
             this.cmbdepartamento = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.cmbsalario = new System.Windows.Forms.ComboBox();
-            this.CmbHorario = new System.Windows.Forms.ComboBox();
+            this.Cmbturno = new System.Windows.Forms.ComboBox();
             this.cmbcargo = new System.Windows.Forms.ComboBox();
             this.Dtpingreso = new System.Windows.Forms.DateTimePicker();
             this.txtcuenta = new System.Windows.Forms.TextBox();
             this.TxtSalarioBase = new System.Windows.Forms.TextBox();
-            this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -62,7 +61,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.Grbempleadopersonal = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbgenero = new System.Windows.Forms.ComboBox();
             this.TxtPrimerNombre = new System.Windows.Forms.TextBox();
             this.dtpnacimiento = new System.Windows.Forms.DateTimePicker();
             this.TxtSegundoNombre = new System.Windows.Forms.TextBox();
@@ -205,20 +204,19 @@
             // Grbempleadoempresarial
             // 
             this.Grbempleadoempresarial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(2)))), ((int)(((byte)(23)))));
+            this.Grbempleadoempresarial.Controls.Add(this.chkestatus);
+            this.Grbempleadoempresarial.Controls.Add(this.cmbusuario);
             this.Grbempleadoempresarial.Controls.Add(this.cmbtipoempleado);
-            this.Grbempleadoempresarial.Controls.Add(this.cmbestatus);
-            this.Grbempleadoempresarial.Controls.Add(this.label22);
             this.Grbempleadoempresarial.Controls.Add(this.dtpsalida);
             this.Grbempleadoempresarial.Controls.Add(this.label21);
             this.Grbempleadoempresarial.Controls.Add(this.cmbdepartamento);
             this.Grbempleadoempresarial.Controls.Add(this.label17);
             this.Grbempleadoempresarial.Controls.Add(this.cmbsalario);
-            this.Grbempleadoempresarial.Controls.Add(this.CmbHorario);
+            this.Grbempleadoempresarial.Controls.Add(this.Cmbturno);
             this.Grbempleadoempresarial.Controls.Add(this.cmbcargo);
             this.Grbempleadoempresarial.Controls.Add(this.Dtpingreso);
             this.Grbempleadoempresarial.Controls.Add(this.txtcuenta);
             this.Grbempleadoempresarial.Controls.Add(this.TxtSalarioBase);
-            this.Grbempleadoempresarial.Controls.Add(this.TxtUsuario);
             this.Grbempleadoempresarial.Controls.Add(this.label13);
             this.Grbempleadoempresarial.Controls.Add(this.label11);
             this.Grbempleadoempresarial.Controls.Add(this.label14);
@@ -235,31 +233,32 @@
             this.Grbempleadoempresarial.TabStop = false;
             this.Grbempleadoempresarial.Text = "Datos Empresariales";
             // 
+            // chkestatus
+            // 
+            this.chkestatus.AutoSize = true;
+            this.chkestatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkestatus.Location = new System.Drawing.Point(359, 446);
+            this.chkestatus.Name = "chkestatus";
+            this.chkestatus.Size = new System.Drawing.Size(88, 24);
+            this.chkestatus.TabIndex = 58;
+            this.chkestatus.Text = "Estatus";
+            this.chkestatus.UseVisualStyleBackColor = true;
+            // 
+            // cmbusuario
+            // 
+            this.cmbusuario.FormattingEnabled = true;
+            this.cmbusuario.Location = new System.Drawing.Point(174, 234);
+            this.cmbusuario.Name = "cmbusuario";
+            this.cmbusuario.Size = new System.Drawing.Size(159, 24);
+            this.cmbusuario.TabIndex = 47;
+            // 
             // cmbtipoempleado
             // 
             this.cmbtipoempleado.FormattingEnabled = true;
-            this.cmbtipoempleado.Location = new System.Drawing.Point(184, 233);
+            this.cmbtipoempleado.Location = new System.Drawing.Point(174, 190);
             this.cmbtipoempleado.Name = "cmbtipoempleado";
             this.cmbtipoempleado.Size = new System.Drawing.Size(159, 24);
             this.cmbtipoempleado.TabIndex = 46;
-            // 
-            // cmbestatus
-            // 
-            this.cmbestatus.FormattingEnabled = true;
-            this.cmbestatus.Location = new System.Drawing.Point(184, 107);
-            this.cmbestatus.Name = "cmbestatus";
-            this.cmbestatus.Size = new System.Drawing.Size(159, 24);
-            this.cmbestatus.TabIndex = 45;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(27, 111);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(66, 20);
-            this.label22.TabIndex = 44;
-            this.label22.Text = "Estatus";
             // 
             // dtpsalida
             // 
@@ -281,7 +280,7 @@
             // cmbdepartamento
             // 
             this.cmbdepartamento.FormattingEnabled = true;
-            this.cmbdepartamento.Location = new System.Drawing.Point(184, 446);
+            this.cmbdepartamento.Location = new System.Drawing.Point(174, 403);
             this.cmbdepartamento.Name = "cmbdepartamento";
             this.cmbdepartamento.Size = new System.Drawing.Size(159, 24);
             this.cmbdepartamento.TabIndex = 41;
@@ -290,7 +289,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(39, 449);
+            this.label17.Location = new System.Drawing.Point(29, 406);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(115, 20);
             this.label17.TabIndex = 40;
@@ -299,23 +298,23 @@
             // cmbsalario
             // 
             this.cmbsalario.FormattingEnabled = true;
-            this.cmbsalario.Location = new System.Drawing.Point(184, 359);
+            this.cmbsalario.Location = new System.Drawing.Point(174, 316);
             this.cmbsalario.Name = "cmbsalario";
             this.cmbsalario.Size = new System.Drawing.Size(159, 24);
             this.cmbsalario.TabIndex = 39;
             // 
-            // CmbHorario
+            // Cmbturno
             // 
-            this.CmbHorario.FormattingEnabled = true;
-            this.CmbHorario.Location = new System.Drawing.Point(184, 190);
-            this.CmbHorario.Name = "CmbHorario";
-            this.CmbHorario.Size = new System.Drawing.Size(159, 24);
-            this.CmbHorario.TabIndex = 38;
+            this.Cmbturno.FormattingEnabled = true;
+            this.Cmbturno.Location = new System.Drawing.Point(174, 147);
+            this.Cmbturno.Name = "Cmbturno";
+            this.Cmbturno.Size = new System.Drawing.Size(159, 24);
+            this.Cmbturno.TabIndex = 38;
             // 
             // cmbcargo
             // 
             this.cmbcargo.FormattingEnabled = true;
-            this.cmbcargo.Location = new System.Drawing.Point(184, 147);
+            this.cmbcargo.Location = new System.Drawing.Point(174, 104);
             this.cmbcargo.Name = "cmbcargo";
             this.cmbcargo.Size = new System.Drawing.Size(159, 24);
             this.cmbcargo.TabIndex = 37;
@@ -330,7 +329,7 @@
             // txtcuenta
             // 
             this.txtcuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcuenta.Location = new System.Drawing.Point(184, 400);
+            this.txtcuenta.Location = new System.Drawing.Point(174, 357);
             this.txtcuenta.Name = "txtcuenta";
             this.txtcuenta.Size = new System.Drawing.Size(273, 26);
             this.txtcuenta.TabIndex = 35;
@@ -338,28 +337,20 @@
             // TxtSalarioBase
             // 
             this.TxtSalarioBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSalarioBase.Location = new System.Drawing.Point(184, 316);
+            this.TxtSalarioBase.Location = new System.Drawing.Point(174, 273);
             this.TxtSalarioBase.Name = "TxtSalarioBase";
             this.TxtSalarioBase.Size = new System.Drawing.Size(273, 26);
             this.TxtSalarioBase.TabIndex = 29;
-            // 
-            // TxtUsuario
-            // 
-            this.TxtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.Location = new System.Drawing.Point(185, 275);
-            this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(231, 26);
-            this.TxtUsuario.TabIndex = 28;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(32, 190);
+            this.label13.Location = new System.Drawing.Point(24, 151);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 20);
+            this.label13.Size = new System.Drawing.Size(112, 20);
             this.label13.TabIndex = 12;
-            this.label13.Text = "Horario";
+            this.label13.Text = "Tipo de Turno";
             // 
             // label11
             // 
@@ -375,7 +366,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(34, 281);
+            this.label14.Location = new System.Drawing.Point(24, 238);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(67, 20);
             this.label14.TabIndex = 13;
@@ -385,7 +376,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(34, 322);
+            this.label15.Location = new System.Drawing.Point(24, 279);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(105, 20);
             this.label15.TabIndex = 14;
@@ -395,7 +386,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(32, 406);
+            this.label20.Location = new System.Drawing.Point(22, 363);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(151, 20);
             this.label20.TabIndex = 19;
@@ -405,7 +396,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(32, 363);
+            this.label19.Location = new System.Drawing.Point(22, 320);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(98, 20);
             this.label19.TabIndex = 18;
@@ -415,7 +406,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(34, 151);
+            this.label12.Location = new System.Drawing.Point(22, 111);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(54, 20);
             this.label12.TabIndex = 11;
@@ -425,7 +416,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(32, 237);
+            this.label18.Location = new System.Drawing.Point(22, 194);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(120, 20);
             this.label18.TabIndex = 17;
@@ -434,7 +425,7 @@
             // Grbempleadopersonal
             // 
             this.Grbempleadopersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(2)))), ((int)(((byte)(23)))));
-            this.Grbempleadopersonal.Controls.Add(this.comboBox1);
+            this.Grbempleadopersonal.Controls.Add(this.cmbgenero);
             this.Grbempleadopersonal.Controls.Add(this.TxtPrimerNombre);
             this.Grbempleadopersonal.Controls.Add(this.dtpnacimiento);
             this.Grbempleadopersonal.Controls.Add(this.TxtSegundoNombre);
@@ -460,13 +451,16 @@
             this.Grbempleadopersonal.TabStop = false;
             this.Grbempleadopersonal.Text = "Datos Personales";
             // 
-            // comboBox1
+            // cmbgenero
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(208, 295);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 34;
+            this.cmbgenero.FormattingEnabled = true;
+            this.cmbgenero.Items.AddRange(new object[] {
+            "Hombre",
+            "noHombre"});
+            this.cmbgenero.Location = new System.Drawing.Point(208, 295);
+            this.cmbgenero.Name = "cmbgenero";
+            this.cmbgenero.Size = new System.Drawing.Size(121, 24);
+            this.cmbgenero.TabIndex = 34;
             // 
             // TxtPrimerNombre
             // 
@@ -645,6 +639,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRegistroEmpleado";
             this.Text = "Registro Empleado";
+            this.Load += new System.EventHandler(this.FrmRegistroEmpleado_Load);
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnResiz)).EndInit();
@@ -673,19 +668,16 @@
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.GroupBox Grbempleadoempresarial;
         private System.Windows.Forms.ComboBox cmbtipoempleado;
-        private System.Windows.Forms.ComboBox cmbestatus;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.DateTimePicker dtpsalida;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox cmbdepartamento;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cmbsalario;
-        private System.Windows.Forms.ComboBox CmbHorario;
+        private System.Windows.Forms.ComboBox Cmbturno;
         private System.Windows.Forms.ComboBox cmbcargo;
         private System.Windows.Forms.DateTimePicker Dtpingreso;
         private System.Windows.Forms.TextBox txtcuenta;
         private System.Windows.Forms.TextBox TxtSalarioBase;
-        private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
@@ -695,7 +687,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox Grbempleadopersonal;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbgenero;
         private System.Windows.Forms.TextBox TxtPrimerNombre;
         private System.Windows.Forms.DateTimePicker dtpnacimiento;
         private System.Windows.Forms.TextBox TxtSegundoNombre;
@@ -713,5 +705,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox TxtDireccion;
+        private System.Windows.Forms.ComboBox cmbusuario;
+        private System.Windows.Forms.CheckBox chkestatus;
     }
 }

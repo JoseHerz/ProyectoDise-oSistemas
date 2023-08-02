@@ -183,5 +183,17 @@ namespace ProyectoDiseñoSistemas.Controlador
 
         }
 
+        public DataTable AlimentarCmbTurno()
+        {
+            SqlConnection Con = new Conexion().GetConexionW();
+            Con.Open();
+            string sql = "ALIMENTARCMBTURNO";
+            SqlDataAdapter dat = new SqlDataAdapter(sql, Con);
+            dat.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dt = new DataTable();
+            dat.Fill(dt);
+            return dt;
+        }
+
     }
 }
