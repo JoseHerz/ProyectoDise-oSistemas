@@ -25,6 +25,21 @@ namespace ProyectoDiseñoSistemas.Vista
         }
 
 
+        public void obtenerempleados()
+        {
+            new EmpleadoControl().ListarEmpleados();
+            dataGridView1.DataSource = EmpleadosModel.GetEmpleado;
+        }
+
+        void filtrar()
+        {
+            EmpleadosModel.GetEmpleado.DefaultView.RowFilter = $"ID_EMPLEADO+PRIMER_NOMBRE+PRIMER_APELLIDO+DNI+DIRECCION+ESTATUS+GENERO like '%{textBox3.Text}%'";
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            filtrar();
+        }
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
@@ -32,11 +47,7 @@ namespace ProyectoDiseñoSistemas.Vista
 
         }
 
-        public void obtenerempleados()
-        {
-            new EmpleadoControl().ListarEmpleados();
-            dataGridView1.DataSource = EmpleadosModel.GetEmpleado;
-        }
+      
         
         private void BtnResiz_Click(object sender, EventArgs e)
         {
@@ -71,6 +82,8 @@ namespace ProyectoDiseñoSistemas.Vista
             mx = e.X;
             my = e.Y;
         }
+
+        
 
         private void BarraTitulo_MouseMove_1(object sender, MouseEventArgs e)
         {

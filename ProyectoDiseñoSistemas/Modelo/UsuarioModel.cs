@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoDiseñoSistemas.Controlador;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -19,6 +20,14 @@ namespace ProyectoDiseñoSistemas.Modelo
         public bool ESTATUS { get; set; }
 
         public static DataTable GetUsuarios{ get; set; }
+
+        UsuarioControl usuariocontrol = new UsuarioControl();
+        public bool Accesouser(string user, string pass)
+        {
+            return usuariocontrol.Acceso(user, pass);
+        }
+
+
 
     }
 }

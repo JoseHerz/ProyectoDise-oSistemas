@@ -141,6 +141,40 @@ namespace ProyectoDiseñoSistemas.Controlador
 
         }
 
+        public bool Acceso(string user, string pass)
+        {
+
+
+            using (SqlConnection Con = new Conexion().GetConexionN())
+            {
+                
+                Con.Open();
+                string sql = "SELECT * FROM USUARIOS WHERE USUARIOS_USER=@user and USUARIOS_PASSWORD=@password";
+
+                using (SqlCommand cmd = new SqlCommand(sql, Con))
+                {
+                    cmd.Parameters.AddWithValue("@user", user);
+                    cmd.Parameters.AddWithValue("@password", pass);
+                    cmd.CommandType = CommandType.Text;
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                
+                }
+
+               Con.Close();
+            }
+
+
+          
+        }
+
 
     }
 }

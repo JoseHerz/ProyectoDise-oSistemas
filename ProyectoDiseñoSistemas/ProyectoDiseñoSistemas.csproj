@@ -113,6 +113,12 @@
     <Compile Include="Vista\Asistencia.Designer.cs">
       <DependentUpon>Asistencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\CrearHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CrearHorario.Designer.cs">
+      <DependentUpon>CrearHorario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,11 +149,11 @@
     <Compile Include="Vista\Horarios.Designer.cs">
       <DependentUpon>Horarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Login.cs">
+    <Compile Include="Vista\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Vista\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Marcaje.cs">
       <SubType>Form</SubType>
@@ -198,6 +204,9 @@
     <EmbeddedResource Include="Vista\Asistencia.resx">
       <DependentUpon>Asistencia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\CrearHorario.resx">
+      <DependentUpon>CrearHorario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,8 +222,8 @@
     <EmbeddedResource Include="Vista\Horarios.resx">
       <DependentUpon>Horarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Marcaje.resx">
       <DependentUpon>Marcaje.cs</DependentUpon>
