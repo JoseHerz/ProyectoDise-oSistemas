@@ -7,9 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoDiseñoSistemas.Controlador;
+using ProyectoDiseñoSistemas.Modelo;
 
 namespace ProyectoDiseñoSistemas.Vista
 {
+    EmpleadosModel empleadosModel;
+    public FrmEmpleados Padre;
+    bool ValEditar = false;
+    bool ValEliminar = false;
+
     public partial class FrmRegistroEmpleado : Form
     {
         public FrmRegistroEmpleado()
@@ -17,6 +24,24 @@ namespace ProyectoDiseñoSistemas.Vista
             InitializeComponent();
         }
 
+        public FrmRegistroEmpleado(string primNom, string segNom, string primApellido, string segApellido, int dni, string direc, int telefono, DateTime fechana, string genero, datew
+            Fechaingre, DateTime fechasal, decimal salbase, int cuenta, bool estado)
+        {
+            InitializeComponent();
+            TxtPrimerNombre.Text = primNom;
+            TxtSegundoNombre.Text = segNom;
+            TxtPrimerApellido.Text = primApellido;
+            TxtSegundoApellido.Text = segApellido;
+            TxtDNI.Text = dni.ToString();
+            TxtDireccion.Text = direc;
+            TxtTelefono.Text = telefono.ToString();
+            dtpnacimiento. = telefono.ToString();
+
+        }
+
+
+
+        //funcionamiento general
         private void BtnExit_Click(object sender, EventArgs e)
         {
             this.Close();
