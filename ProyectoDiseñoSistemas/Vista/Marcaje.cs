@@ -15,36 +15,43 @@ namespace ProyectoDiseñoSistemas.Vista
     public partial class Marcaje : Form
     {
         AsistenciaModel AsistenciaModel;
-
         AsistenciaControl AS = new AsistenciaControl();
+
         public Marcaje()
         {
             InitializeComponent();
             lblmens.Hide();
+            NomEmpl.Hide();
+            obtenerasistecia();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            horalb.Text = DateTime.Now.ToString("hh: mm: ss: HH");
-            Fechalb.Text = DateTime.Now.ToString("dd/ MMM / yyyy");
+            horalb.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            Fechalb.Text = DateTime.Now.ToString("dd / MMM / yyyy");
         }
 
         void GuardarMarca()
         {
+
+            var x = DateTime.Now.ToString("HH:mm:ss");
+            var y = DateTime.Now.ToString("yyyy/MM/dd");
             AsistenciaModel = new AsistenciaModel();
             AsistenciaModel.ID_EMPLEADO = int.Parse(txtid.Text);
-            AsistenciaModel.MARCAJE_FECHA = DateTime.Parse(Fechalb.Text);
-            AsistenciaModel.MARCAJE_HORA = DateTime.Parse(horalb.Text);
+            AsistenciaModel.MARCAJE_FECHA = DateTime.Parse(y);
+            AsistenciaModel.MARCAJE_HORA = DateTime.Parse(x); 
             AsistenciaModel.ESTATUS = true;
             
 
             if (AS.Crear_Asistencia(AsistenciaModel) == true)
             {
                 lblmens.Show();
-                NomEmpl.Text = 
+                NomEmpl.Show();
+                NomEmpl.Text = AS.empleadoget(int.Parse(txtid.Text));
+                obtenerasistecia();
                 lblmens.Text = "MARCA REGISTRADA";
                 txtid.Text = string.Empty;
-                this.Close();
+                
             }
             else
             {
@@ -53,6 +60,14 @@ namespace ProyectoDiseñoSistemas.Vista
 
 
         }
+
+
+        public void obtenerasistecia()
+        {
+            AS.ListarAsistencia();
+            dataGridView1.DataSource = AsistenciaModel.GetAsistencia;
+        }
+
 
 
 
@@ -113,6 +128,10 @@ namespace ProyectoDiseñoSistemas.Vista
             my = e.Y;
         }
 
+        private void btnmarca_Click(object sender, EventArgs e)
+        {
+            GuardarMarca();
+        }
 
         private void BarraTitulo_MouseMove(object sender, MouseEventArgs e)
         {

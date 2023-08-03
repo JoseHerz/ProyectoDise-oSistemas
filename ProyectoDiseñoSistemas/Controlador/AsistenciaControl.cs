@@ -20,8 +20,8 @@ namespace ProyectoDiseñoSistemas.Controlador
                 using (SqlConnection Con = new Conexion().GetConexionN())
                 {
                     Con.Open();
-                    string sql = "Insert Into ASISTENCIA(ID_ASISTENCIA,ID_EMPLEADO,MARCAJE_HORA,MARCAJE_FECHA,ESTATUS) select" +
-                                " '" + Modelo.ID_ASISTENCIA + "', '" + Modelo.ID_EMPLEADO + "','" + Modelo.MARCAJE_HORA + "','" + Modelo.MARCAJE_FECHA + "','" + Modelo.ESTATUS + "'";
+                    string sql = "Insert Into ASISTENCIA(ID_EMPLEADO,MARCAJE_HORA,MARCAJE_FECHA,ESTATUS) select" +
+                                " '" + Modelo.ID_EMPLEADO + "','" + Modelo.MARCAJE_HORA + "','" + Modelo.MARCAJE_FECHA + "','" + Modelo.ESTATUS + "'";
 
                     using (SqlCommand cmd = new SqlCommand(sql, Con))
                     {
@@ -95,14 +95,7 @@ namespace ProyectoDiseñoSistemas.Controlador
             {
                 SqlConnection Con = new Conexion().GetConexionN();
                 Con.Open();
-                string sql = "Select" +
-                            "A.ID_ASISTENCIA AS ID," +
-                            "CONCAT(E.PRIMER_NOMBRE, ' ', E.PRIMER_APELLIDO) AS NOMBRE," +
-                            "A.MARCAJE_FECHA AS Fecha," +
-                            "A.MARCAJE_HORA AS Hora," +
-                            "A.ESTATUS" +
-                            "FROM EMPLEADOS E" +
-                            "INNER JOIN ASISTENCIA A ON E.ID_EMPLEADO = A.ID_EMPLEADO;";
+                string sql = "SELECT A.ID_ASISTENCIA AS ID,CONCAT(E.PRIMER_NOMBRE, ' ', E.PRIMER_APELLIDO) AS NOMBRE,A.MARCAJE_FECHA AS Fecha,A.MARCAJE_HORA AS Hora,A.ESTATUS FROM EMPLEADOS E INNER JOIN ASISTENCIA A ON E.ID_EMPLEADO = A.ID_EMPLEADO WHERE CONVERT(DATE, A.MARCAJE_FECHA) = CONVERT(DATE, GETDATE()) ORDER BY A.MARCAJE_HORA DESC;";
                 
                 SqlDataAdapter adaptador = new SqlDataAdapter(sql, Con);
                 adaptador.Fill(dt);
@@ -151,29 +144,35 @@ namespace ProyectoDiseñoSistemas.Controlador
 
 
 
-        public void empleadoget(AsistenciaModel Modelo)
+        public string empleadoget(int id)
         {
-            DataTable dt = new DataTable();
+
+            string nombreEmpleado = null;
+
             try
             {
                 SqlConnection Con = new Conexion().GetConexionN();
                 Con.Open();
-                string sql = "Select" +
-                            "A.ID_ASISTENCIA AS ID," +
-                            "CONCAT(E.PRIMER_NOMBRE, ' ', E.PRIMER_APELLIDO) AS NOMBRE," +
-                            "FROM EMPLEADOS E" +
-                            " WHERE ID_EMPLEADO = '" + Modelo.ID_EMPLEADO + "';";
-                            
+                string sql = " Select CONCAT(E.PRIMER_NOMBRE, ' ', E.PRIMER_APELLIDO) AS NOMBRE_EMPLEADO FROM EMPLEADOS E WHERE ID_EMPLEADO = @id";
 
-                SqlDataAdapter adaptador = new SqlDataAdapter(sql, Con);
-                adaptador.Fill(dt);
+                SqlCommand command = new SqlCommand(sql, Con);
+                command.Parameters.AddWithValue("@id", id);
+                
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        nombreEmpleado = reader["NOMBRE_EMPLEADO"].ToString();
+                    }
+                }
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            AsistenciaModel.GetAsistencia = dt;
 
+            return nombreEmpleado;
         }
 
 

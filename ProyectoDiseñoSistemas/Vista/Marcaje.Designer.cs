@@ -37,6 +37,9 @@
             this.BtnMax = new System.Windows.Forms.PictureBox();
             this.BtnExit = new System.Windows.Forms.PictureBox();
             this.PanelCentral = new System.Windows.Forms.Panel();
+            this.lblmens = new System.Windows.Forms.Label();
+            this.btnmarca = new System.Windows.Forms.Button();
+            this.txtid = new System.Windows.Forms.TextBox();
             this.horalb = new System.Windows.Forms.Label();
             this.Fechalb = new System.Windows.Forms.Label();
             this.NomEmpl = new System.Windows.Forms.Label();
@@ -53,9 +56,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.txtid = new System.Windows.Forms.TextBox();
-            this.btnmarca = new System.Windows.Forms.Button();
-            this.lblmens = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnResiz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMin)).BeginInit();
@@ -64,6 +65,7 @@
             this.PanelCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhotoEmpl)).BeginInit();
             this.MenuVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -147,6 +149,7 @@
             // PanelCentral
             // 
             this.PanelCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.PanelCentral.Controls.Add(this.dataGridView1);
             this.PanelCentral.Controls.Add(this.lblmens);
             this.PanelCentral.Controls.Add(this.btnmarca);
             this.PanelCentral.Controls.Add(this.txtid);
@@ -160,12 +163,42 @@
             this.PanelCentral.Size = new System.Drawing.Size(642, 599);
             this.PanelCentral.TabIndex = 8;
             // 
+            // lblmens
+            // 
+            this.lblmens.AutoSize = true;
+            this.lblmens.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmens.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblmens.Location = new System.Drawing.Point(304, 311);
+            this.lblmens.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblmens.Name = "lblmens";
+            this.lblmens.Size = new System.Drawing.Size(49, 13);
+            this.lblmens.TabIndex = 38;
+            this.lblmens.Text = "registro";
+            this.lblmens.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnmarca
+            // 
+            this.btnmarca.Location = new System.Drawing.Point(398, 344);
+            this.btnmarca.Name = "btnmarca";
+            this.btnmarca.Size = new System.Drawing.Size(93, 20);
+            this.btnmarca.TabIndex = 37;
+            this.btnmarca.Text = "Marcar";
+            this.btnmarca.UseVisualStyleBackColor = true;
+            this.btnmarca.Click += new System.EventHandler(this.btnmarca_Click);
+            // 
+            // txtid
+            // 
+            this.txtid.Location = new System.Drawing.Point(236, 344);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(146, 20);
+            this.txtid.TabIndex = 36;
+            // 
             // horalb
             // 
             this.horalb.AutoSize = true;
             this.horalb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.horalb.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.horalb.Location = new System.Drawing.Point(265, 128);
+            this.horalb.Location = new System.Drawing.Point(264, 79);
             this.horalb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.horalb.Name = "horalb";
             this.horalb.Size = new System.Drawing.Size(118, 20);
@@ -178,7 +211,7 @@
             this.Fechalb.AutoSize = true;
             this.Fechalb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fechalb.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Fechalb.Location = new System.Drawing.Point(252, 97);
+            this.Fechalb.Location = new System.Drawing.Point(251, 48);
             this.Fechalb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Fechalb.Name = "Fechalb";
             this.Fechalb.Size = new System.Drawing.Size(144, 25);
@@ -191,7 +224,7 @@
             this.NomEmpl.AutoSize = true;
             this.NomEmpl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NomEmpl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.NomEmpl.Location = new System.Drawing.Point(111, 388);
+            this.NomEmpl.Location = new System.Drawing.Point(112, 272);
             this.NomEmpl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NomEmpl.Name = "NomEmpl";
             this.NomEmpl.Size = new System.Drawing.Size(419, 39);
@@ -203,10 +236,10 @@
             // PhotoEmpl
             // 
             this.PhotoEmpl.Image = global::ProyectoDiseñoSistemas.Properties.Resources._585e4beacb11b227491c3399;
-            this.PhotoEmpl.Location = new System.Drawing.Point(233, 184);
+            this.PhotoEmpl.Location = new System.Drawing.Point(256, 116);
             this.PhotoEmpl.Margin = new System.Windows.Forms.Padding(2);
             this.PhotoEmpl.Name = "PhotoEmpl";
-            this.PhotoEmpl.Size = new System.Drawing.Size(163, 171);
+            this.PhotoEmpl.Size = new System.Drawing.Size(139, 141);
             this.PhotoEmpl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PhotoEmpl.TabIndex = 31;
             this.PhotoEmpl.TabStop = false;
@@ -393,34 +426,13 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // txtid
+            // dataGridView1
             // 
-            this.txtid.Location = new System.Drawing.Point(172, 481);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(146, 20);
-            this.txtid.TabIndex = 36;
-            // 
-            // btnmarca
-            // 
-            this.btnmarca.Location = new System.Drawing.Point(334, 481);
-            this.btnmarca.Name = "btnmarca";
-            this.btnmarca.Size = new System.Drawing.Size(93, 20);
-            this.btnmarca.TabIndex = 37;
-            this.btnmarca.Text = "Marcar";
-            this.btnmarca.UseVisualStyleBackColor = true;
-            // 
-            // lblmens
-            // 
-            this.lblmens.AutoSize = true;
-            this.lblmens.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmens.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblmens.Location = new System.Drawing.Point(286, 446);
-            this.lblmens.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblmens.Name = "lblmens";
-            this.lblmens.Size = new System.Drawing.Size(49, 13);
-            this.lblmens.TabIndex = 38;
-            this.lblmens.Text = "registro";
-            this.lblmens.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(69, 404);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(516, 150);
+            this.dataGridView1.TabIndex = 39;
             // 
             // Marcaje
             // 
@@ -444,6 +456,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PhotoEmpl)).EndInit();
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -476,5 +489,6 @@
         private System.Windows.Forms.Button btnmarca;
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Label lblmens;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
