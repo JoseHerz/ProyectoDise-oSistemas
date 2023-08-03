@@ -32,14 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Marcaje));
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.PanelCentral = new System.Windows.Forms.Panel();
-            this.MenuVertical = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.BtnResiz = new System.Windows.Forms.PictureBox();
             this.BtnMin = new System.Windows.Forms.PictureBox();
             this.BtnMax = new System.Windows.Forms.PictureBox();
             this.BtnExit = new System.Windows.Forms.PictureBox();
+            this.PanelCentral = new System.Windows.Forms.Panel();
+            this.horalb = new System.Windows.Forms.Label();
+            this.Fechalb = new System.Windows.Forms.Label();
+            this.NomEmpl = new System.Windows.Forms.Label();
+            this.PhotoEmpl = new System.Windows.Forms.PictureBox();
+            this.MenuVertical = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnUsuario = new System.Windows.Forms.Button();
@@ -48,19 +50,17 @@
             this.BtnFacturas = new System.Windows.Forms.Button();
             this.BtnPlanilla = new System.Windows.Forms.Button();
             this.BtnEmpleados = new System.Windows.Forms.Button();
-            this.PhotoEmpl = new System.Windows.Forms.PictureBox();
-            this.NomEmpl = new System.Windows.Forms.Label();
-            this.Fechalb = new System.Windows.Forms.Label();
-            this.horalb = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.BarraTitulo.SuspendLayout();
-            this.PanelCentral.SuspendLayout();
-            this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnResiz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnExit)).BeginInit();
+            this.PanelCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhotoEmpl)).BeginInit();
+            this.MenuVertical.SuspendLayout();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -91,59 +91,6 @@
             this.label2.Size = new System.Drawing.Size(91, 24);
             this.label2.TabIndex = 18;
             this.label2.Text = "Principal";
-            // 
-            // PanelCentral
-            // 
-            this.PanelCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.PanelCentral.Controls.Add(this.horalb);
-            this.PanelCentral.Controls.Add(this.Fechalb);
-            this.PanelCentral.Controls.Add(this.NomEmpl);
-            this.PanelCentral.Controls.Add(this.PhotoEmpl);
-            this.PanelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelCentral.Location = new System.Drawing.Point(220, 0);
-            this.PanelCentral.Name = "PanelCentral";
-            this.PanelCentral.Size = new System.Drawing.Size(642, 599);
-            this.PanelCentral.TabIndex = 8;
-            // 
-            // MenuVertical
-            // 
-            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(2)))), ((int)(((byte)(23)))));
-            this.MenuVertical.Controls.Add(this.button2);
-            this.MenuVertical.Controls.Add(this.button1);
-            this.MenuVertical.Controls.Add(this.BtnUsuario);
-            this.MenuVertical.Controls.Add(this.BtnHorarios);
-            this.MenuVertical.Controls.Add(this.BtnAsistencia);
-            this.MenuVertical.Controls.Add(this.BtnFacturas);
-            this.MenuVertical.Controls.Add(this.BtnPlanilla);
-            this.MenuVertical.Controls.Add(this.BtnEmpleados);
-            this.MenuVertical.Controls.Add(this.label1);
-            this.MenuVertical.Controls.Add(this.panel1);
-            this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
-            this.MenuVertical.Location = new System.Drawing.Point(0, 0);
-            this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(220, 599);
-            this.MenuVertical.TabIndex = 7;
-            this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(56, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 24);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Apartados:";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(225)))));
-            this.panel1.Location = new System.Drawing.Point(3, 393);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 43);
-            this.panel1.TabIndex = 11;
             // 
             // BtnResiz
             // 
@@ -193,6 +140,90 @@
             this.BtnExit.TabIndex = 0;
             this.BtnExit.TabStop = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // PanelCentral
+            // 
+            this.PanelCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.PanelCentral.Controls.Add(this.horalb);
+            this.PanelCentral.Controls.Add(this.Fechalb);
+            this.PanelCentral.Controls.Add(this.NomEmpl);
+            this.PanelCentral.Controls.Add(this.PhotoEmpl);
+            this.PanelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelCentral.Location = new System.Drawing.Point(220, 0);
+            this.PanelCentral.Name = "PanelCentral";
+            this.PanelCentral.Size = new System.Drawing.Size(642, 599);
+            this.PanelCentral.TabIndex = 8;
+            // 
+            // horalb
+            // 
+            this.horalb.AutoSize = true;
+            this.horalb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.horalb.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.horalb.Location = new System.Drawing.Point(265, 128);
+            this.horalb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.horalb.Name = "horalb";
+            this.horalb.Size = new System.Drawing.Size(118, 20);
+            this.horalb.TabIndex = 35;
+            this.horalb.Text = "02:15:44 p.m.";
+            this.horalb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Fechalb
+            // 
+            this.Fechalb.AutoSize = true;
+            this.Fechalb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fechalb.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Fechalb.Location = new System.Drawing.Point(252, 97);
+            this.Fechalb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Fechalb.Name = "Fechalb";
+            this.Fechalb.Size = new System.Drawing.Size(144, 25);
+            this.Fechalb.TabIndex = 33;
+            this.Fechalb.Text = "31/Julio/2023";
+            this.Fechalb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // NomEmpl
+            // 
+            this.NomEmpl.AutoSize = true;
+            this.NomEmpl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomEmpl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NomEmpl.Location = new System.Drawing.Point(111, 388);
+            this.NomEmpl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NomEmpl.Name = "NomEmpl";
+            this.NomEmpl.Size = new System.Drawing.Size(419, 39);
+            this.NomEmpl.TabIndex = 32;
+            this.NomEmpl.Text = "Juan Orlando Hernandez";
+            this.NomEmpl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NomEmpl.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // PhotoEmpl
+            // 
+            this.PhotoEmpl.Image = global::ProyectoDiseñoSistemas.Properties.Resources._585e4beacb11b227491c3399;
+            this.PhotoEmpl.Location = new System.Drawing.Point(233, 184);
+            this.PhotoEmpl.Margin = new System.Windows.Forms.Padding(2);
+            this.PhotoEmpl.Name = "PhotoEmpl";
+            this.PhotoEmpl.Size = new System.Drawing.Size(163, 171);
+            this.PhotoEmpl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PhotoEmpl.TabIndex = 31;
+            this.PhotoEmpl.TabStop = false;
+            // 
+            // MenuVertical
+            // 
+            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(2)))), ((int)(((byte)(23)))));
+            this.MenuVertical.Controls.Add(this.button2);
+            this.MenuVertical.Controls.Add(this.button1);
+            this.MenuVertical.Controls.Add(this.BtnUsuario);
+            this.MenuVertical.Controls.Add(this.BtnHorarios);
+            this.MenuVertical.Controls.Add(this.BtnAsistencia);
+            this.MenuVertical.Controls.Add(this.BtnFacturas);
+            this.MenuVertical.Controls.Add(this.BtnPlanilla);
+            this.MenuVertical.Controls.Add(this.BtnEmpleados);
+            this.MenuVertical.Controls.Add(this.label1);
+            this.MenuVertical.Controls.Add(this.panel1);
+            this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MenuVertical.Location = new System.Drawing.Point(0, 0);
+            this.MenuVertical.Name = "MenuVertical";
+            this.MenuVertical.Size = new System.Drawing.Size(220, 599);
+            this.MenuVertical.TabIndex = 7;
+            this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
             // button2
             // 
@@ -331,56 +362,25 @@
             this.BtnEmpleados.Text = "Empleados";
             this.BtnEmpleados.UseVisualStyleBackColor = false;
             // 
-            // PhotoEmpl
+            // label1
             // 
-            this.PhotoEmpl.Image = global::ProyectoDiseñoSistemas.Properties.Resources._585e4beacb11b227491c3399;
-            this.PhotoEmpl.Location = new System.Drawing.Point(233, 184);
-            this.PhotoEmpl.Margin = new System.Windows.Forms.Padding(2);
-            this.PhotoEmpl.Name = "PhotoEmpl";
-            this.PhotoEmpl.Size = new System.Drawing.Size(163, 171);
-            this.PhotoEmpl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PhotoEmpl.TabIndex = 31;
-            this.PhotoEmpl.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(56, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 24);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Apartados:";
             // 
-            // NomEmpl
+            // panel1
             // 
-            this.NomEmpl.AutoSize = true;
-            this.NomEmpl.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NomEmpl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.NomEmpl.Location = new System.Drawing.Point(111, 388);
-            this.NomEmpl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.NomEmpl.Name = "NomEmpl";
-            this.NomEmpl.Size = new System.Drawing.Size(419, 39);
-            this.NomEmpl.TabIndex = 32;
-            this.NomEmpl.Text = "Juan Orlando Hernandez";
-            this.NomEmpl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.NomEmpl.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // Fechalb
-            // 
-            this.Fechalb.AutoSize = true;
-            this.Fechalb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fechalb.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Fechalb.Location = new System.Drawing.Point(252, 97);
-            this.Fechalb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Fechalb.Name = "Fechalb";
-            this.Fechalb.Size = new System.Drawing.Size(144, 25);
-            this.Fechalb.TabIndex = 33;
-            this.Fechalb.Text = "31/Julio/2023";
-            this.Fechalb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // horalb
-            // 
-            this.horalb.AutoSize = true;
-            this.horalb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.horalb.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.horalb.Location = new System.Drawing.Point(265, 128);
-            this.horalb.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.horalb.Name = "horalb";
-            this.horalb.Size = new System.Drawing.Size(118, 20);
-            this.horalb.TabIndex = 35;
-            this.horalb.Text = "02:15:44 p.m.";
-            this.horalb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(33)))), ((int)(((byte)(225)))));
+            this.panel1.Location = new System.Drawing.Point(3, 393);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 43);
+            this.panel1.TabIndex = 11;
             // 
             // timer1
             // 
@@ -400,15 +400,15 @@
             this.Text = "Marcaje";
             this.BarraTitulo.ResumeLayout(false);
             this.BarraTitulo.PerformLayout();
-            this.PanelCentral.ResumeLayout(false);
-            this.PanelCentral.PerformLayout();
-            this.MenuVertical.ResumeLayout(false);
-            this.MenuVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnResiz)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnExit)).EndInit();
+            this.PanelCentral.ResumeLayout(false);
+            this.PanelCentral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PhotoEmpl)).EndInit();
+            this.MenuVertical.ResumeLayout(false);
+            this.MenuVertical.PerformLayout();
             this.ResumeLayout(false);
 
         }

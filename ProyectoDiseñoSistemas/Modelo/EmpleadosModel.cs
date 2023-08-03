@@ -17,7 +17,7 @@ namespace ProyectoDiseñoSistemas.Modelo
 
         public string SEGUNDO_APELLIDO { get; set; }
 
-        public int DNI { get; set; }
+        public string DNI { get; set; }
         public string DIRECCION { get; set; }
 
         public int TELEFONO { get; set; }
