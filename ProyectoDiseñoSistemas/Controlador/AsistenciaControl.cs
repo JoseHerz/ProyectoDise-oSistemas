@@ -150,5 +150,33 @@ namespace ProyectoDiseñoSistemas.Controlador
         }
 
 
+
+        public void empleadoget(AsistenciaModel Modelo)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                SqlConnection Con = new Conexion().GetConexionN();
+                Con.Open();
+                string sql = "Select" +
+                            "A.ID_ASISTENCIA AS ID," +
+                            "CONCAT(E.PRIMER_NOMBRE, ' ', E.PRIMER_APELLIDO) AS NOMBRE," +
+                            "FROM EMPLEADOS E" +
+                            " WHERE ID_EMPLEADO = '" + Modelo.ID_EMPLEADO + "';";
+                            
+
+                SqlDataAdapter adaptador = new SqlDataAdapter(sql, Con);
+                adaptador.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            AsistenciaModel.GetAsistencia = dt;
+
+        }
+
+
+
     }
 }

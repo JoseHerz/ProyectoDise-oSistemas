@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoDiseñoSistemas.Controlador;
+using ProyectoDiseñoSistemas.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +14,49 @@ namespace ProyectoDiseñoSistemas.Vista
 {
     public partial class Marcaje : Form
     {
+        AsistenciaModel AsistenciaModel;
+
+        AsistenciaControl AS = new AsistenciaControl();
         public Marcaje()
         {
             InitializeComponent();
+            lblmens.Hide();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            horalb.Text = DateTime.Now.ToString("hh: mm: ss: HH");
+            Fechalb.Text = DateTime.Now.ToString("dd/ MMM / yyyy");
+        }
+
+        void GuardarMarca()
+        {
+            AsistenciaModel = new AsistenciaModel();
+            AsistenciaModel.ID_EMPLEADO = int.Parse(txtid.Text);
+            AsistenciaModel.MARCAJE_FECHA = DateTime.Parse(Fechalb.Text);
+            AsistenciaModel.MARCAJE_HORA = DateTime.Parse(horalb.Text);
+            AsistenciaModel.ESTATUS = true;
+            
+
+            if (AS.Crear_Asistencia(AsistenciaModel) == true)
+            {
+                lblmens.Show();
+                NomEmpl.Text = 
+                lblmens.Text = "MARCA REGISTRADA";
+                txtid.Text = string.Empty;
+                this.Close();
+            }
+            else
+            {
+                lblmens.Text = "MARCA NO REGISTRADA";
+            }
+
+
+        }
+
+
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -37,11 +78,7 @@ namespace ProyectoDiseñoSistemas.Vista
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            horalb.Text = DateTime.Now.ToString("hh: mm: ss: tt");
-            Fechalb.Text = DateTime.Now.ToString("dd/ MMM / yyyy");
-        }
+      
 
         private void BtnExit_Click(object sender, EventArgs e)
         {

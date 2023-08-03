@@ -61,7 +61,7 @@ namespace ProyectoDiseñoSistemas.Vista
             empleadosModel.SEGUNDO_NOMBRE = TxtSegundoNombre.Text;
             empleadosModel.PRIMER_APELLIDO = TxtPrimerApellido.Text;
             empleadosModel.SEGUNDO_APELLIDO = TxtSegundoApellido.Text;
-            empleadosModel.DNI = int.Parse(TxtDNI.Text);
+            empleadosModel.DNI = TxtDNI.Text;
             empleadosModel.DIRECCION = TxtDireccion.Text;
             empleadosModel.TELEFONO = int.Parse(TxtTelefono.Text);
             empleadosModel.FECHA_NACIMIENTO = dtpnacimiento.Value;

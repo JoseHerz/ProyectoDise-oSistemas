@@ -53,6 +53,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.txtid = new System.Windows.Forms.TextBox();
+            this.btnmarca = new System.Windows.Forms.Button();
+            this.lblmens = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnResiz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnMin)).BeginInit();
@@ -144,6 +147,9 @@
             // PanelCentral
             // 
             this.PanelCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.PanelCentral.Controls.Add(this.lblmens);
+            this.PanelCentral.Controls.Add(this.btnmarca);
+            this.PanelCentral.Controls.Add(this.txtid);
             this.PanelCentral.Controls.Add(this.horalb);
             this.PanelCentral.Controls.Add(this.Fechalb);
             this.PanelCentral.Controls.Add(this.NomEmpl);
@@ -387,6 +393,35 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // txtid
+            // 
+            this.txtid.Location = new System.Drawing.Point(172, 481);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(146, 20);
+            this.txtid.TabIndex = 36;
+            // 
+            // btnmarca
+            // 
+            this.btnmarca.Location = new System.Drawing.Point(334, 481);
+            this.btnmarca.Name = "btnmarca";
+            this.btnmarca.Size = new System.Drawing.Size(93, 20);
+            this.btnmarca.TabIndex = 37;
+            this.btnmarca.Text = "Marcar";
+            this.btnmarca.UseVisualStyleBackColor = true;
+            // 
+            // lblmens
+            // 
+            this.lblmens.AutoSize = true;
+            this.lblmens.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmens.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblmens.Location = new System.Drawing.Point(286, 446);
+            this.lblmens.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblmens.Name = "lblmens";
+            this.lblmens.Size = new System.Drawing.Size(49, 13);
+            this.lblmens.TabIndex = 38;
+            this.lblmens.Text = "registro";
+            this.lblmens.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Marcaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,5 +473,8 @@
         private System.Windows.Forms.Label horalb;
         private System.Windows.Forms.Label Fechalb;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnmarca;
+        private System.Windows.Forms.TextBox txtid;
+        private System.Windows.Forms.Label lblmens;
     }
 }
