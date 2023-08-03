@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectoDiseñoSistemas.Controlador;
+using ProyectoDiseñoSistemas.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,21 @@ namespace ProyectoDiseñoSistemas.Vista
         {
             InitializeComponent();
         }
+
+        private void FrmAsistencia_Load(object sender, EventArgs e)
+        {
+            obtenerasistencia();
+        }
+
+
+        public void obtenerasistencia()
+        {
+            new AsistenciaControl().ListarAsistencia();
+            dataGridView1.DataSource = AsistenciaModel.GetAsistencia;
+        }
+
+
+
 
         private void BtnResiz_Click_1(object sender, EventArgs e)
         {
